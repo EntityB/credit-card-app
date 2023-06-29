@@ -1,0 +1,17 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+
+  tests-e2e:
+    build:
+      context: ./tests-e2e
+      dockerfile: Dockerfile
+    depends_on:
+      - app
+    environment:
+      - API_URL=http://my-app:8080
