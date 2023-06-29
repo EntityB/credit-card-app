@@ -2,6 +2,8 @@
 
 ## Realization
 
+[API doc](doc/api.md)
+
 ### Code location
 
 - source code is in `src`
